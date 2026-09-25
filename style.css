@@ -4,3 +4,31 @@
   object-fit: cover;
   border-radius: 50%;
 }
+.hero-section {
+  position: relative;
+  min-height: 500px;
+  color: white;
+  background: linear-gradient(
+    -45deg,
+    #141e30,
+    #243b55,
+    #42275a,
+    #734b6d
+  );
+  background-size: 400% 400%;
+  animation: movingBackground 20s ease infinite;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 30px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
